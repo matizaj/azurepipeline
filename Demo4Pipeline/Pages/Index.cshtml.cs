@@ -11,7 +11,7 @@ namespace Demo4Pipeline.Pages
     {
         public void OnGet()
         {
-
+            string name = "Mateusz";
         }
     }
 }
