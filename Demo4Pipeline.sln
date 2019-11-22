@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4Pipeline", "Demo4Pipeline\Demo4Pipeline.csproj", "{72223C70-BFDE-44EC-95AD-57E436F9387E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo4Pipeline", "Demo4Pipeline\Demo4Pipeline.csproj", "{72223C70-BFDE-44EC-95AD-57E436F9387E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo4Pipeline.TEST", "Demo4Pipeline.TEST\Demo4Pipeline.TEST.csproj", "{4F87AE03-1C1C-4CA6-9C53-3D68FF87C198}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{72223C70-BFDE-44EC-95AD-57E436F9387E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72223C70-BFDE-44EC-95AD-57E436F9387E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72223C70-BFDE-44EC-95AD-57E436F9387E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F87AE03-1C1C-4CA6-9C53-3D68FF87C198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F87AE03-1C1C-4CA6-9C53-3D68FF87C198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F87AE03-1C1C-4CA6-9C53-3D68FF87C198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F87AE03-1C1C-4CA6-9C53-3D68FF87C198}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
