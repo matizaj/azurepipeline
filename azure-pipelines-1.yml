@@ -47,7 +47,6 @@ steps:
       az login
 - task: UniversalPackages@0
   displayName: Push to UP
-  condition: and(succeeded())
   inputs:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)/drop'
