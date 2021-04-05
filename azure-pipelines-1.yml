@@ -11,6 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  version: 123
 
 
 steps:
@@ -54,10 +55,5 @@ steps:
     vstsFeedPublish: '2d490202-a003-4888-b45c-70ea12d8bb2c/e6c13509-597e-4ec3-b967-280e212d8945'
     vstsFeedPackagePublish: 'my-first-package'
     versionOption: 'patch'
+    versionPublish: $(version)
     packagePublishDescription: 'test'
-- task: CmdLine@2
-  displayName: push to unive pack
-  inputs:
-    script: |
-      az artifacts universal publish --organization https://dev.azure.com/MatZajOrg/ --project="Demo" --scope project --feed my-test-feed --name my-first-package --version 0.0.10 --description "Welcome to Universal Packages" --path $(Build.ArtifactStagingDirectory)/drop
-
