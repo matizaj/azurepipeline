@@ -11,7 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  version: 123
+  version: 2.2.3
 
 
 steps:
