@@ -39,7 +39,11 @@ steps:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
   displayName: "Publish drop"
 
-
+- task: CmdLine@2
+  displayName: az login
+  inputs:
+    script: |
+      az login
 - task: UniversalPackages@0
   displayName: Push to UP
   inputs:
