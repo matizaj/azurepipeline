@@ -46,6 +46,7 @@ steps:
       az login
 - task: UniversalPackages@0
   displayName: Push to UP
+  condition: and(succeeded())
   inputs:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)/drop'
@@ -58,5 +59,5 @@ steps:
   displayName: push to unive pack
   inputs:
     script: |
-      az artifacts universal publish --organization https://dev.azure.com/MatZajOrg/ --project="Demo" --scope project --feed my-test-feed --name my-first-package --version 0.0.1 --description "Welcome to Universal Packages" --path $(Build.ArtifactStagingDirectory)/drop
+      az artifacts universal publish --organization https://dev.azure.com/MatZajOrg/ --project="Demo" --scope project --feed my-test-feed --name my-first-package --version 0.0.10 --description "Welcome to Universal Packages" --path $(Build.ArtifactStagingDirectory)/drop
 
