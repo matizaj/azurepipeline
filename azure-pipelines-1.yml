@@ -26,8 +26,27 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release'
 - task: DotNetCoreCLI@2
+  displayName: publish
   inputs:
-    command: test
-    projects: '**TEST/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    command: 'publish'
+    publishWebProjects: false
+    arguments: "-c Release -o $(Build.ArtifactStagingDirectory)/drop"
+    projects: '$(System.DefaultWorkingDirectory)/WebApplication1/WebApplication1.csproj'
+    zipAfterPublish: false
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
+  displayName: "Publish drop"
+- task: CmdLine@2
+  inputs:
+    script: |
+      az artifacts universal publish
+          --organization https://dev.azure.com/MatZajOrg/
+          --project="Demo"
+          --scope project
+          --feed my-test-feed
+          --name my-first-package
+          --version 0.0.1
+          --description "Welcome to Universal Packages"
+          --path .
 
