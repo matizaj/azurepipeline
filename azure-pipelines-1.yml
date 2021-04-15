@@ -56,5 +56,10 @@ steps:
     versionOption: 'custom'
     versionPublish: $(version)
     packagePublishDescription: 'test'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.ArtifactStagingDirectory)/drop'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/drop2'
   
 
