@@ -61,5 +61,9 @@ steps:
     SourceFolder: '$(Build.ArtifactStagingDirectory)/drop'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/drop2'
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop2'
+  displayName: "Publish drop"
   
 
