@@ -64,6 +64,6 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop2'
-  displayName: "Publish drop"
+  displayName: "Publish drop2"
   
 
