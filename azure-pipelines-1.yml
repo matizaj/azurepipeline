@@ -70,4 +70,10 @@ steps:
     artifact: 'drop'
     path: $(Build.SourcesDirectory)/bin
   
-
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'pipelineSSH'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)/drop'
+    contents: '**'
+    targetFolder: 'C:\Users\TRBC37\Desktop\result'
+    readyTimeout: '20000'
