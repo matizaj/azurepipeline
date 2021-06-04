@@ -65,5 +65,9 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop2'
   displayName: "Publish drop2"
+- task: DownloadPipelineArtifact@2
+  inputs:
+    artifact: 'drop'
+    path: $(Build.SourcesDirectory)/bin
   
 
