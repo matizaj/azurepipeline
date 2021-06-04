@@ -72,7 +72,7 @@ steps:
   
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'pipelineSSH'
+    sshEndpoint: 'kkw1ssh'
     sourceFolder: '$(Build.ArtifactStagingDirectory)/drop'
     contents: '**'
     targetFolder: 'C:\Users\TRBC37\Desktop\result'
