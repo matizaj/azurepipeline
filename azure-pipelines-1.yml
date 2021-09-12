@@ -10,12 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  buildConfiguration: 'Release'
-  version: 2.2.3
+- group: test-group
 
 
 steps:
-
+- task: CmdLine@2
+  inputs:
+    script: 'echo token'
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
@@ -54,7 +55,7 @@ steps:
     vstsFeedPublish: '2d490202-a003-4888-b45c-70ea12d8bb2c/e6c13509-597e-4ec3-b967-280e212d8945'
     vstsFeedPackagePublish: 'my-first-package'    
     versionOption: 'custom'
-    versionPublish: $(version)
+    versionPublish: 2.2.3
     packagePublishDescription: 'test'
 - task: CopyFiles@2
   inputs:
